@@ -30,6 +30,15 @@ bot.on('message', function(user, userID, channelID, message, rawEvent) {
 });
 
 bot.on('message', function(user, userID, channelID, message, rawEvent) {
+    if (message === "bot github link please") {
+        bot.sendMessage({
+            to: channelID,
+            message: "You can find my current code at: https://github.com/atanasbozhkov/My-Little-Discord-Bot"
+        });
+    }
+});
+
+bot.on('message', function(user, userID, channelID, message, rawEvent) {
     console.log(user + ' has spoken');
     if (message === "hey bot") {
         if(user == 'Nasco'){
